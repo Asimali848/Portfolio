@@ -2,7 +2,7 @@ import { Book } from "iconsax-react";
 
 import User from "@/assets/img/Image.png";
 import Footer from "@/components/footer";
-import Nav from "@/components/header";
+import Nav from "@/components/navbar";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -58,7 +58,7 @@ const About = () => {
       <div className="mx-auto grid h-full w-full max-w-[1455px] grid-cols-2 items-center justify-center gap-6 p-2 pt-5">
         <div className="col-span-1 flex items-center justify-center rounded-3xl bg-white/8 p-5">
           <section className="w-full px-4 py-5 sm:px-6 lg:px-8">
-            <h2 className="mb-6 text-2xl font-semibold text-white">
+            <h2 className="mb-6 text-2xl font-semibold text-white/80">
               Experience
             </h2>
             <div className="space-y-4">
@@ -71,7 +71,7 @@ const About = () => {
                     <div className="rounded-lg bg-zinc-800 p-2">
                       <Book
                         variant="Bold"
-                        className="size-10 fill-white text-white"
+                        className="size-10 fill-[#00a988] text-white"
                       />
                     </div>
                     <div className="flex w-full flex-col items-start justify-center gap-2">
@@ -92,7 +92,7 @@ const About = () => {
         </div>
         <div className="col-span-1 flex items-center justify-center rounded-3xl bg-white/8 p-5">
           <section className="w-full px-4 py-5 sm:px-6 lg:px-8">
-            <h2 className="mb-6 text-2xl font-semibold text-white">
+            <h2 className="mb-6 text-2xl font-semibold text-white/80">
               Education
             </h2>
             <div className="space-y-4">
@@ -105,7 +105,7 @@ const About = () => {
                     <div className="rounded-lg bg-zinc-800 p-2">
                       <Book
                         variant="Bulk"
-                        className="size-10 fill-white text-white"
+                        className="size-10 fill-[#00a988] text-white"
                       />
                     </div>
                     <div className="flex w-full flex-col items-start justify-center gap-2">
@@ -138,29 +138,29 @@ const About = () => {
                 {testimonials.map((item, index) => (
                   <CarouselItem
                     key={index}
-                    className="md:basis-1/2 lg:basis-1/2"
+                    className="cursor-grab md:basis-1/2 lg:basis-1/2"
                   >
                     <div className="p-2">
                       <Card className="h-full rounded-2xl border border-white/10 bg-[#161616] text-white">
-                        <CardContent className="flex h-full flex-col justify-between gap-5 p-6">
-                          <img
-                            src={item.avatar}
-                            alt={item.name}
-                            width={48}
-                            height={48}
-                            className="rounded-full object-cover"
-                          />
-                          <p className="text-muted-foreground text-base leading-relaxed">
-                            {item.testimonial}
+                        <CardContent className="flex h-full min-h-[250px] flex-col justify-between gap-10">
+                          <p className="text-muted-foreground text-[30px] leading-[35px] font-bold">
+                            "{item.testimonial}"
                           </p>
 
-                          <div>
-                            <h4 className="text-lg font-semibold text-white/60">
-                              {item.name}
-                            </h4>
-                            <p className="text-muted-foreground text-sm">
-                              {item.title}
-                            </p>
+                          <div className="mr-auto flex items-center justify-center gap-2.5">
+                            <img
+                              src={item.avatar}
+                              alt={item.name}
+                              className="size-12 rounded-full object-cover"
+                            />
+                            <div className="flex flex-col gap-1">
+                              <h4 className="text-lg font-semibold text-white/60">
+                                {item.name}
+                              </h4>
+                              <p className="text-muted-foreground text-sm">
+                                {item.title}
+                              </p>
+                            </div>
                           </div>
                         </CardContent>
                       </Card>
@@ -168,8 +168,8 @@ const About = () => {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
+              <CarouselPrevious className="cursor-pointer" />
+              <CarouselNext className="cursor-pointer" />
             </Carousel>
           </div>
         </div>

@@ -8,7 +8,7 @@ import {
 
 import Hand from "@/assets/icons/code_hand.png";
 import Footer from "@/components/footer";
-import Nav from "@/components/header";
+import Nav from "@/components/navbar";
 import { Button } from "@/components/ui/button";
 import WorkProject from "@/components/work-project";
 
@@ -23,8 +23,8 @@ const Home = () => {
             alt=""
             className="h-full w-full rounded-full object-cover"
           />
-          <div className="flex flex-col items-center justify-center gap-2">
-            <h1 className="text-4xl font-semibold"> Asim Ali</h1>
+          <div className="flex flex-col items-center justify-center gap-2 text-white/80">
+            <h1 className="text-4xl font-semibold text-pretty"> Asim Ali</h1>
             <p className="font-medium">Frontend Developer</p>
             <span className="flex items-center justify-center gap-2">
               <Facebook
@@ -45,7 +45,7 @@ const Home = () => {
         <div className="col-span-2 flex flex-col items-start justify-center gap-10 p-6">
           <div className="flex flex-col items-start justify-center gap-5 rounded-3xl bg-white/8 p-10">
             <span className="text-base text-[#8a8691]">Hello There!</span>
-            <h1 className="max-w-prose text-4xl text-pretty">
+            <h1 className="max-w-prose text-4xl text-pretty text-white/80">
               I'm Asim Ali, a Frontend Developer bringing designs to life with
               clean, responsive code. I specialize in translating Figma-perfect
               visuals into performant user interfaces.
@@ -54,7 +54,7 @@ const Home = () => {
               <MoreCircle className="size-4 fill-green-500" />
               Available for Freelancing
             </p>
-            <Button className="cursor-pointer bg-[#00a988] hover:bg-[#007e64]">
+            <Button className="cursor-pointer bg-[#00a988] text-white hover:bg-[#007e64]">
               Download CV
               <DocumentDownload
                 className="size-6 fill-white"
@@ -63,7 +63,7 @@ const Home = () => {
             </Button>
           </div>
           <div className="relative w-full overflow-hidden rounded-3xl bg-white/8 p-10">
-            <h1 className="mb-5 pl-6 text-2xl font-semibold text-pretty">
+            <h1 className="mb-5 pl-6 text-2xl font-semibold text-pretty text-white/80">
               Company I worked With
             </h1>
 

@@ -1,15 +1,17 @@
 import { Route, Routes } from "react-router-dom";
 
 import About from "./pages/about";
+import Contact from "./pages/contact";
 import Home from "./pages/home";
 import Work from "./pages/work";
 
 const App = () => {
   return (
     <Routes>
-      <Route index element={<Home />} />
+      <Route path="/home" index element={<Home />} />
       <Route path="/about" element={<About />} />
-      <Route path="/work" element={<Work />} />
+      <Route path="/works" element={<Work />} />
+      <Route path="/contact" element={<Contact />} />
     </Routes>
   );
 };
