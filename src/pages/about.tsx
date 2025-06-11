@@ -15,10 +15,10 @@ import { education, experiences, testimonials } from "@/lib/constants";
 
 const About = () => {
   return (
-    <div className="mx-auto h-full w-full overflow-auto bg-black pt-36 text-white">
+    <div className="mx-auto h-full w-full overflow-auto bg-black pt-20 text-white lg:pt-36">
       <Nav />
       {/* Intro  */}
-      <div className="mx-auto grid h-full w-full max-w-[1455px] grid-cols-3 items-center justify-center gap-4 p-2">
+      <div className="mx-auto flex h-full w-full max-w-[1455px] flex-col items-center justify-center gap-6 p-2 lg:grid lg:grid-cols-3 lg:gap-4">
         <div className="col-span-1 flex items-center justify-center rounded-3xl bg-white/8 p-5">
           <img
             src={User}
@@ -27,7 +27,7 @@ const About = () => {
           />
         </div>
         <div className="col-span-2 mx-auto flex w-full flex-col items-start justify-center gap-10">
-          <div className="flex w-full flex-col items-start justify-center gap-5 rounded-3xl bg-white/8 p-15">
+          <div className="flex w-full flex-col items-start justify-center gap-5 rounded-3xl bg-white/8 px-5 py-10 lg:p-15">
             <h1 className="text-4xl font-semibold text-white/70">
               Hi! I'm Asim Ali - Frontend Developer
             </h1>
@@ -55,7 +55,7 @@ const About = () => {
         </div>
       </div>
       {/* Experience & Education */}
-      <div className="mx-auto grid h-full w-full max-w-[1455px] grid-cols-2 items-center justify-center gap-6 p-2 pt-5">
+      <div className="mx-auto flex h-full w-full max-w-[1455px] flex-col items-center justify-center gap-6 p-2 pt-5 lg:grid lg:grid-cols-2">
         <div className="col-span-1 flex items-center justify-center rounded-3xl bg-white/8 p-5">
           <section className="w-full px-4 py-5 sm:px-6 lg:px-8">
             <h2 className="mb-6 text-2xl font-semibold text-white/80">
@@ -129,20 +129,24 @@ const About = () => {
       <div className="mx-auto h-full w-full max-w-[1455px] items-center justify-center gap-6 p-2 pt-5">
         <div className="mx-auto flex w-full flex-col items-center justify-center gap-10 rounded-3xl bg-white/8 px-5 py-16">
           <div className="mx-auto flex w-full flex-col items-center justify-center text-white/70">
-            <h2 className="mb-6 text-2xl font-semibold">Testimonials</h2>
-            <p className="mb-6 text-5xl font-medium">What Colleagues Say!</p>
+            <h2 className="mb-6 text-lg font-semibold lg:text-2xl">
+              Testimonials
+            </h2>
+            <p className="mb-6 text-center text-4xl font-medium lg:text-5xl">
+              What Colleagues Say!
+            </p>
           </div>
           <div className="relative">
-            <Carousel className="relative mx-auto w-full max-w-7xl">
+            <Carousel className="relative mx-auto w-full max-w-sm px-6 lg:max-w-7xl">
               <CarouselContent>
                 {testimonials.map((item, index) => (
                   <CarouselItem
                     key={index}
-                    className="cursor-grab md:basis-1/2 lg:basis-1/2"
+                    className="basis-1/1 cursor-grab md:basis-1/2 lg:basis-1/2"
                   >
                     <div className="p-2">
-                      <Card className="h-full rounded-2xl border border-white/10 bg-[#161616] text-white">
-                        <CardContent className="flex h-full min-h-[250px] flex-col justify-between gap-10">
+                      <Card className="h-full w-full rounded-2xl border border-white/10 bg-[#161616] text-white">
+                        <CardContent className="flex h-full min-h-[250px] w-full flex-col justify-between gap-10">
                           <p className="text-muted-foreground text-[30px] leading-[35px] font-bold">
                             "{item.testimonial}"
                           </p>
@@ -168,14 +172,14 @@ const About = () => {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="cursor-pointer" />
-              <CarouselNext className="cursor-pointer" />
+              <CarouselPrevious className="absolute top-[106%] bottom-4 left-35 -translate-y-1/2 cursor-pointer" />
+              <CarouselNext className="absolute top-[106%] right-35 bottom-4 -translate-y-1/2 cursor-pointer" />
             </Carousel>
           </div>
         </div>
       </div>
       {/* footer */}
-      <div className="mt-5">
+      <div className="mt-3 p-2">
         <Footer />
       </div>
     </div>

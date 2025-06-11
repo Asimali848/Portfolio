@@ -5,11 +5,11 @@ import { Button } from "./ui/button";
 const Footer = () => {
   return (
     <>
-      <div className="mx-auto flex h-full w-full max-w-[1440px] flex-col items-center justify-center gap-6 rounded-3xl bg-white/8 p-32">
-        <h1 className="text-center text-5xl leading-[57px] text-pretty text-white/80">
+      <div className="mx-auto flex h-full w-full max-w-[1440px] flex-col items-center justify-center gap-6 rounded-3xl bg-white/8 px-5 py-10 lg:p-32">
+        <h1 className="w-full text-center text-4xl text-pretty text-white/80 lg:text-5xl lg:leading-[57px]">
           Are You Ready to kickstart your project with a touch of magic?
         </h1>
-        <p className="px-24 text-center text-lg text-pretty text-[#8a8691]">
+        <p className="w-full text-center text-lg text-pretty text-[#8a8691] lg:px-24">
           Reach out and let's make it happen ✨. I'm also available for
           full-time or Part-time opportunities to push the boundaries of design
           and deliver exceptional work.

@@ -14,14 +14,14 @@ import WorkProject from "@/components/work-project";
 
 const Home = () => {
   return (
-    <div className="relative mx-auto h-screen w-full overflow-auto bg-black text-white">
+    <div className="relative mx-auto min-h-screen w-full overflow-auto bg-black text-white px-5">
       <Nav />
-      <div className="mx-auto grid h-full w-full max-w-[1440px] grid-cols-3 items-center justify-center p-2">
-        <div className="col-span-1 rounded-3xl bg-white/8 p-5">
+      <div className="mx-auto flex h-full w-full max-w-[1440px] flex-col items-center justify-center gap-6 p-2 md:grid md:grid-cols-3 mt-[141%] md:mt-40">
+        <div className=" rounded-3xl bg-white/8 p-5 py-6.5 col-span-1 ">
           <img
             src={Hand}
             alt=""
-            className="h-full w-full rounded-full object-cover"
+            className="rounded-full object-cover size-full"
           />
           <div className="flex flex-col items-center justify-center gap-2 text-white/80">
             <h1 className="text-4xl font-semibold text-pretty"> Asim Ali</h1>
@@ -42,10 +42,10 @@ const Home = () => {
             </span>
           </div>
         </div>
-        <div className="col-span-2 flex flex-col items-start justify-center gap-10 p-6">
-          <div className="flex flex-col items-start justify-center gap-5 rounded-3xl bg-white/8 p-10">
+        <div className="flex w-full flex-col items-start justify-center gap-6 md:col-span-2 lg:gap-10 lg:p-6">
+          <div className="flex flex-col items-start justify-center gap-5 rounded-3xl bg-white/8 p-5 lg:p-10">
             <span className="text-base text-[#8a8691]">Hello There!</span>
-            <h1 className="max-w-prose text-4xl text-pretty text-white/80">
+            <h1 className="w-full text-lg text-pretty text-white/80 lg:max-w-prose lg:text-4xl">
               I'm Asim Ali, a Frontend Developer bringing designs to life with
               clean, responsive code. I specialize in translating Figma-perfect
               visuals into performant user interfaces.
@@ -63,7 +63,7 @@ const Home = () => {
             </Button>
           </div>
           <div className="relative w-full overflow-hidden rounded-3xl bg-white/8 p-10">
-            <h1 className="mb-5 pl-6 text-2xl font-semibold text-pretty text-white/80">
+            <h1 className="mx-auto mb-5 flex w-full items-center justify-center text-lg font-semibold text-pretty text-white/80 lg:pl-6 lg:text-2xl">
               Company I worked With
             </h1>
 
@@ -87,8 +87,10 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <WorkProject />
-      <div className="mt-10">
+      <div className="mt-[118%] md:mt-10 p-2">
+        <WorkProject />
+      </div>
+      <div className="mt-3 lg:mt-10 p-2">
         <Footer />
       </div>
     </div>

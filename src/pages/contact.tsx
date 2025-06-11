@@ -53,18 +53,18 @@ const Contact = () => {
   };
 
   return (
-    <div className="relative mx-auto h-screen w-full overflow-auto bg-black text-white">
+    <div className="relative mx-auto h-full min-h-screen w-full overflow-auto bg-black text-white">
       <Nav />
-      <div className="mx-auto h-full w-full max-w-[1440px] items-center justify-center p-2 pt-36">
-        <div className="flex flex-col gap-16 rounded-3xl bg-white/8 px-5 py-16">
+      <div className="mx-auto h-full w-full max-w-[1440px] items-center justify-center p-2 pt-22 lg:pt-36">
+        <div className="flex flex-col gap-16 rounded-3xl bg-white/8 px-2 py-16 lg:px-5">
           <div className="flex flex-col items-center justify-center gap-5">
             <span className="text-white/60">Contact</span>
-            <h1 className="text-5xl font-semibold text-white/80">
+            <h1 className="text-center text-4xl font-semibold text-white/80 lg:text-left lg:text-5xl">
               Get in Touch With Me!
             </h1>
           </div>
 
-          <div className="mx-auto grid w-full grid-cols-3 gap-6 px-7 text-white/80">
+          <div className="mx-auto flex w-full flex-col gap-6 text-white/80 lg:grid lg:grid-cols-3 lg:px-7">
             <div className="col-span-1 flex flex-col items-start justify-center gap-10 rounded-3xl border border-white/10 px-10 py-16">
               <div className="flex flex-col gap-2">
                 <Location className="size-6 fill-[#00a988]" variant={"Bold"} />
@@ -89,9 +89,9 @@ const Contact = () => {
 
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="col-span-2 flex flex-col items-center justify-center gap-5 rounded-3xl border border-white/10 px-10"
+              className="col-span-2 flex flex-col items-center justify-center gap-5 rounded-3xl border border-white/10 px-5 py-10 lg:px-10"
             >
-              <div className="flex w-full items-center justify-center gap-5">
+              <div className="flex w-full flex-col items-center justify-center gap-5 lg:flex-row">
                 <div className="flex w-full flex-col gap-2">
                   <Label className="px-2">Full Name</Label>
                   <input
@@ -154,7 +154,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <div className="">
+      <div className="mt-6 p-2">
         <Footer />
       </div>
     </div>

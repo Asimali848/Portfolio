@@ -65,14 +65,14 @@ const WorkProject = () => {
   return (
     <div className="mx-auto min-h-full w-full max-w-[1440px] rounded-3xl bg-white/8">
       <div className="mx-auto flex w-full flex-col items-center justify-center gap-4 p-6 py-10 text-white/80">
-        <h1 className="text-6xl font-medium">Works & Projects</h1>
-        <p className="w-1/2 text-center text-lg text-pretty text-white/60">
+        <h1 className="text-4xl font-medium lg:text-6xl">Works & Projects</h1>
+        <p className="w-full text-center text-lg text-pretty text-white/60 lg:w-1/2">
           Check out some of my design projects, thoughtfully built with
           precision and care. Each interface showcases my passion for clean
           code, responsive design, and seamless user experiences.
         </p>
       </div>
-      <div className="mx-auto h-full w-full p-10 text-white">
+      <div className="mx-auto h-full w-full p-7 text-white lg:p-10">
         {/* Tabs */}
         <div className="mb-8 flex flex-wrap gap-4">
           {tabs.map((tab) => (

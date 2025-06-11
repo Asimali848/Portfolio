@@ -8,7 +8,7 @@ import Work from "./pages/work";
 const App = () => {
   return (
     <Routes>
-      <Route path="/home" index element={<Home />} />
+      <Route path="/" index element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/works" element={<Work />} />
       <Route path="/contact" element={<Contact />} />
