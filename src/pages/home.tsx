@@ -1,10 +1,8 @@
-import {
-  DocumentDownload,
-  Facebook,
-  Instagram,
-  MoreCircle,
-  Youtube,
-} from "iconsax-react";
+import { DocumentDownload, MoreCircle } from "iconsax-react";
+import { AiFillInstagram } from "react-icons/ai";
+import { BiLogoGmail } from "react-icons/bi";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaSquareFacebook } from "react-icons/fa6";
 
 import Hand from "@/assets/icons/code_hand.png";
 import Footer from "@/components/footer";
@@ -14,35 +12,29 @@ import WorkProject from "@/components/work-project";
 
 const Home = () => {
   return (
-    <div className="relative mx-auto min-h-screen w-full overflow-auto bg-black text-white px-5">
+    <div className="relative mx-auto min-h-screen w-full overflow-auto bg-black px-1 md:px-5 lg:px-0 text-white">
       <Nav />
-      <div className="mx-auto flex h-full w-full max-w-[1440px] flex-col items-center justify-center gap-6 p-2 md:grid md:grid-cols-3 mt-[141%] md:mt-40">
-        <div className=" rounded-3xl bg-white/8 p-5 py-6.5 col-span-1 ">
+      
+      <div className="mx-auto pt-24 md:pt-0 lg:mt-[10%] flex h-full w-full backdrop-blur-3xl z-30 max-w-[1440px] flex-col items-center justify-center gap-6 p-2 md:mt-40 md:grid md:grid-cols-3 lg:gap-0 lg:p-0">
+        <div className="col-span-1 rounded-3xl bg-white/8 p-5 py-5 h-full">
           <img
             src={Hand}
             alt=""
-            className="rounded-full object-cover size-full"
+            className="rounded-full object-cover "
           />
           <div className="flex flex-col items-center justify-center gap-2 text-white/80">
             <h1 className="text-4xl font-semibold text-pretty"> Asim Ali</h1>
             <p className="font-medium">Frontend Developer</p>
             <span className="flex items-center justify-center gap-2">
-              <Facebook
-                className="z-10 size-10 fill-white/50"
-                variant={"Outline"}
-              />
-              <Instagram
-                className="z-10 size-10 fill-white/50"
-                variant={"Outline"}
-              />
-              <Youtube
-                className="z-10 size-10 fill-white/50"
-                variant={"Outline"}
-              />
+              <FaSquareFacebook className="z-10 size-7 fill-white/50 hover:cursor-pointer hover:fill-blue-400" />
+              <AiFillInstagram className="z-10 size-8 fill-white/50 hover:cursor-pointer hover:fill-pink-400" />
+              <FaGithub className="z-10 size-6 fill-white/50 hover:cursor-pointer hover:fill-white" />
+              <FaLinkedin className="z-10 size-6 fill-white/50 hover:cursor-pointer hover:fill-blue-400" />
+              <BiLogoGmail className="z-10 size-7 fill-white/50 hover:cursor-pointer hover:fill-red-400" />
             </span>
           </div>
         </div>
-        <div className="flex w-full flex-col items-start justify-center gap-6 md:col-span-2 lg:gap-10 lg:p-6">
+        <div className="flex w-full flex-col items-start justify-center gap-6 md:col-span-2 lg:gap-6 lg:px-7">
           <div className="flex flex-col items-start justify-center gap-5 rounded-3xl bg-white/8 p-5 lg:p-10">
             <span className="text-base text-[#8a8691]">Hello There!</span>
             <h1 className="w-full text-lg text-pretty text-white/80 lg:max-w-prose lg:text-4xl">
@@ -87,10 +79,10 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="mt-[118%] md:mt-10 p-2">
+      <div className="mt-3 lg:mt-[18%] p-2 md:mt-7">
         <WorkProject />
       </div>
-      <div className="mt-3 lg:mt-10 p-2">
+      <div className="mt-3 p-2 lg:mt-10">
         <Footer />
       </div>
     </div>

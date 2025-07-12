@@ -1,11 +1,11 @@
-import { DirectboxReceive } from "iconsax-react";
+import { Messages1 } from "iconsax-react";
 
 import { Button } from "./ui/button";
 
 const Footer = () => {
   return (
     <>
-      <div className="mx-auto flex h-full w-full max-w-[1440px] flex-col items-center justify-center gap-6 rounded-3xl bg-white/8 px-5 py-10 lg:p-32">
+      <div className="mx-auto flex h-full w-full max-w-[1440px] flex-col items-center justify-center gap-6 rounded-3xl bg-white/8 px-5 py-10 lg:p-32 backdrop-blur-3xl">
         <h1 className="w-full text-center text-4xl text-pretty text-white/80 lg:text-5xl lg:leading-[57px]">
           Are You Ready to kickstart your project with a touch of magic?
         </h1>
@@ -16,7 +16,7 @@ const Footer = () => {
         </p>
         <Button className="cursor-pointer rounded-xl bg-[#00a988] p-6 text-lg text-white hover:bg-[#007e64]">
           Let's Talk{" "}
-          <DirectboxReceive className="size-6 fill-white" variant={"Bulk"} />
+          <Messages1 className="size-6 fill-white" variant={"Bold"} />
         </Button>
       </div>
       <div className="mx-auto flex h-full w-full max-w-[1440px] items-center justify-between p-5 py-10">

@@ -3,43 +3,43 @@ import { useState } from "react";
 const projects = [
   {
     id: 1,
-    title: "Mobile Application Design",
+    title: "ClipSort",
     category: "Branding",
     image:
       "https://wordpressboss.com/cp/bentos-demo/assets/images/projects/work1.jpg",
   },
   {
     id: 2,
-    title: "Website Makeup Design",
-    category: "Design",
+    title: "Estimator AI-Consturction Plan",
+    category: "AI Design",
     image:
       "	https://wordpressboss.com/cp/bentos-demo/assets/images/projects/work2.jpg",
   },
   {
     id: 3,
-    title: "Brand Identity and Motion Design",
-    category: "Graphics",
+    title: "True-Mail",
+    category: "Product Design",
     image:
       "	https://wordpressboss.com/cp/bentos-demo/assets/images/projects/work3.jpg",
   },
   {
     id: 4,
-    title: "Mobile Application Design",
-    category: "Game",
+    title: "Methology",
+    category: "Study Plateform",
     image:
       "https://wordpressboss.com/cp/bentos-demo/assets/images/projects/work4.jpg",
   },
   {
     id: 5,
-    title: "Application Design",
+    title: "EDGE-SWAGTASTIC",
     category: "Branding",
     image:
       "	https://wordpressboss.com/cp/bentos-demo/assets/images/projects/work5.jpg",
   },
   {
     id: 6,
-    title: "Website Development",
-    category: "Design",
+    title: "PimPact",
+    category: "SEO Plateform",
     image:
       "	https://wordpressboss.com/cp/bentos-demo/assets/images/projects/work6.jpg",
   },
@@ -47,11 +47,11 @@ const projects = [
 
 const tabs = [
   "Show All",
-  "Design",
+  "AI Design",
+  "Product Design",
   "Branding",
-  "Marketing",
-  "Game",
-  "Graphics",
+  "Study Plateform",
+  "SEO Plateform",
 ];
 
 const WorkProject = () => {
@@ -63,7 +63,7 @@ const WorkProject = () => {
       : projects.filter((project) => project.category === activeTab);
 
   return (
-    <div className="mx-auto min-h-full w-full max-w-[1440px] rounded-3xl bg-white/8">
+    <div className="mx-auto min-h-full w-full max-w-[1440px] rounded-3xl bg-white/8 backdrop-blur-3xl">
       <div className="mx-auto flex w-full flex-col items-center justify-center gap-4 p-6 py-10 text-white/80">
         <h1 className="text-4xl font-medium lg:text-6xl">Works & Projects</h1>
         <p className="w-full text-center text-lg text-pretty text-white/60 lg:w-1/2">

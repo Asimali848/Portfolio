@@ -53,7 +53,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="relative mx-auto h-full min-h-screen w-full overflow-auto bg-black text-white">
+    <div className="relative mx-auto h-full min-h-screen w-full overflow-auto bg-black text-white px-1 md:px-5 lg:px-0">
       <Nav />
       <div className="mx-auto h-full w-full max-w-[1440px] items-center justify-center p-2 pt-22 lg:pt-36">
         <div className="flex flex-col gap-16 rounded-3xl bg-white/8 px-2 py-16 lg:px-5">
@@ -154,7 +154,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <div className="mt-6 p-2">
+      <div className="mt-3 p-2 lg:mt-10">
         <Footer />
       </div>
     </div>

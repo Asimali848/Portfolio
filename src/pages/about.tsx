@@ -15,10 +15,10 @@ import { education, experiences, testimonials } from "@/lib/constants";
 
 const About = () => {
   return (
-    <div className="mx-auto h-full w-full overflow-auto bg-black pt-20 text-white lg:pt-36">
+    <div className="mx-auto h-full w-full overflow-auto bg-black pt-20 text-white lg:pt-36 px-1  md:px-5 lg:px-0">
       <Nav />
       {/* Intro  */}
-      <div className="mx-auto flex h-full w-full max-w-[1455px] flex-col items-center justify-center gap-6 p-2 lg:grid lg:grid-cols-3 lg:gap-4">
+      <div className="mx-auto flex h-full w-full max-w-[1455px] flex-col items-center justify-center gap-6 p-2 lg:grid lg:grid-cols-3 lg:gap-5">
         <div className="col-span-1 flex items-center justify-center rounded-3xl bg-white/8 p-5">
           <img
             src={User}
@@ -55,7 +55,7 @@ const About = () => {
         </div>
       </div>
       {/* Experience & Education */}
-      <div className="mx-auto flex h-full w-full max-w-[1455px] flex-col items-center justify-center gap-6 p-2 pt-5 lg:grid lg:grid-cols-2">
+      <div className="mx-auto flex h-full w-full max-w-[1455px] flex-col items-center justify-center gap-6 p-2 pt-5 lg:mt-8 lg:grid lg:grid-cols-2">
         <div className="col-span-1 flex items-center justify-center rounded-3xl bg-white/8 p-5">
           <section className="w-full px-4 py-5 sm:px-6 lg:px-8">
             <h2 className="mb-6 text-2xl font-semibold text-white/80">
@@ -126,7 +126,7 @@ const About = () => {
         </div>
       </div>
       {/* Testimonials */}
-      <div className="mx-auto h-full w-full max-w-[1455px] items-center justify-center gap-6 p-2 pt-5">
+      <div className="mx-auto h-full w-full max-w-[1455px] items-center justify-center gap-6 p-2 pt-5 lg:mt-8">
         <div className="mx-auto flex w-full flex-col items-center justify-center gap-10 rounded-3xl bg-white/8 px-5 py-16">
           <div className="mx-auto flex w-full flex-col items-center justify-center text-white/70">
             <h2 className="mb-6 text-lg font-semibold lg:text-2xl">
@@ -179,7 +179,7 @@ const About = () => {
         </div>
       </div>
       {/* footer */}
-      <div className="mt-3 p-2">
+      <div className="mt-3 p-2 lg:mt-10">
         <Footer />
       </div>
     </div>
